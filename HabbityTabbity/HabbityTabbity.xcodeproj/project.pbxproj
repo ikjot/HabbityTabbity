@@ -19,6 +19,11 @@
 		842FEE58205BA1F200933210 /* UIViewController+Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FEE57205BA1F200933210 /* UIViewController+Customization.swift */; };
 		842FEE5C205F2AF300933210 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 842FEE5B205F2AF300933210 /* GoogleService-Info.plist */; };
 		842FEE5E205F308300933210 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842FEE5D205F308300933210 /* SignUpViewController.swift */; };
+		8458AA75206F5CC300D5D1E5 /* NRActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458AA74206F5CC300D5D1E5 /* NRActivityView.swift */; };
+		8458AA78206F5D2B00D5D1E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458AA77206F5D2B00D5D1E5 /* Constants.swift */; };
+		8458AA7B206F5DED00D5D1E5 /* UIColor+MoreColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458AA7A206F5DED00D5D1E5 /* UIColor+MoreColors.swift */; };
+		8458AA7D206F62DD00D5D1E5 /* HTHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458AA7C206F62DD00D5D1E5 /* HTHelper.swift */; };
+		8458AA7F206F6ACF00D5D1E5 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458AA7E206F6ACF00D5D1E5 /* ForgotPasswordViewController.swift */; };
 		C0BC7274EBBAD9210F9C5ACE /* Pods_HabbityTabbityUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8032115CB6266C4B81C46136 /* Pods_HabbityTabbityUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +66,11 @@
 		842FEE57205BA1F200933210 /* UIViewController+Customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Customization.swift"; sourceTree = "<group>"; };
 		842FEE5B205F2AF300933210 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		842FEE5D205F308300933210 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8458AA74206F5CC300D5D1E5 /* NRActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRActivityView.swift; sourceTree = "<group>"; };
+		8458AA77206F5D2B00D5D1E5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8458AA7A206F5DED00D5D1E5 /* UIColor+MoreColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+MoreColors.swift"; sourceTree = "<group>"; };
+		8458AA7C206F62DD00D5D1E5 /* HTHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTHelper.swift; sourceTree = "<group>"; };
+		8458AA7E206F6ACF00D5D1E5 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		8954E9E4F3C281E91C2408F0 /* Pods-HabbityTabbityUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabbityTabbityUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HabbityTabbityUITests/Pods-HabbityTabbityUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9EA96F33F570230C73EAFFA2 /* Pods-HabbityTabbityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabbityTabbityTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HabbityTabbityTests/Pods-HabbityTabbityTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1DDB2CF8B28419938CAA815 /* Pods_HabbityTabbity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HabbityTabbity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +182,7 @@
 			children = (
 				842FEE28205B69A500933210 /* LoginViewController.swift */,
 				842FEE5D205F308300933210 /* SignUpViewController.swift */,
+				8458AA7E206F6ACF00D5D1E5 /* ForgotPasswordViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -180,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				842FEE57205BA1F200933210 /* UIViewController+Customization.swift */,
+				8458AA7A206F5DED00D5D1E5 /* UIColor+MoreColors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -187,10 +199,29 @@
 		842FEE5A205BA20F00933210 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8458AA76206F5CCB00D5D1E5 /* Common */,
 				842FEE56205B69F000933210 /* ViewControllers */,
 				842FEE59205BA20200933210 /* Extensions */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		8458AA76206F5CCB00D5D1E5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8458AA74206F5CC300D5D1E5 /* NRActivityView.swift */,
+				8458AA7C206F62DD00D5D1E5 /* HTHelper.swift */,
+				8458AA79206F5D3A00D5D1E5 /* Utility */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8458AA79206F5D3A00D5D1E5 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				8458AA77206F5D2B00D5D1E5 /* Constants.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		FED7DC06C4C006E57A2517EF /* Pods */ = {
@@ -506,10 +537,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8458AA75206F5CC300D5D1E5 /* NRActivityView.swift in Sources */,
 				842FEE29205B69A500933210 /* LoginViewController.swift in Sources */,
+				8458AA7B206F5DED00D5D1E5 /* UIColor+MoreColors.swift in Sources */,
 				842FEE58205BA1F200933210 /* UIViewController+Customization.swift in Sources */,
 				842FEE5E205F308300933210 /* SignUpViewController.swift in Sources */,
+				8458AA7F206F6ACF00D5D1E5 /* ForgotPasswordViewController.swift in Sources */,
+				8458AA7D206F62DD00D5D1E5 /* HTHelper.swift in Sources */,
 				842FEE27205B69A500933210 /* AppDelegate.swift in Sources */,
+				8458AA78206F5D2B00D5D1E5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

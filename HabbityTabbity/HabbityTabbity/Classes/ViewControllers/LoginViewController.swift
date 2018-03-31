@@ -59,26 +59,32 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginAction(_ sender: UIButton) {
-        if self.emailTextField.text == "" || self.passwordTextField.text == "" {
-            let alertController = UIAlertController(title: "Error", message: "Please enter an email and password.", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(defaultAction)
-            self.present(alertController, animated: true, completion: nil)
-        } else {
+        if self.checkData() {
+            if !HTHelper.isInternetConnected() {
+                NRActivityView.showBannerMessage(noInternetConnectionString, isSuccess: false)
+            }
             Auth.auth().signIn(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (user, error) in
                 if error == nil {
                     print("You have successfully logged in")
                 } else {
-                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alertController.addAction(defaultAction)
-                    self.present(alertController, animated: true, completion: nil)
+                    NRActivityView.showBannerMessage(someErrorOccuredString, isSuccess: false)
                 }
             }
         }
         
     }
+   
+    @IBAction func signupAction(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let signupController = storyboard.instantiateViewController(withIdentifier: "SignUpViewController")
+        self.navigationController?.pushViewController(signupController, animated: true)
+    }
     
+    @IBAction func forgotPasswordAction(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let signupController = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordViewController")
+        self.navigationController?.pushViewController(signupController, animated: true)
+    }
     
     //
     //    @IBAction func logOutAction(sender: AnyObject) {
@@ -95,39 +101,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //    }
     //
     
-//    @IBAction func resetAction(_ sender: AnyObject) {
-//
-//        if self.emailTextField.text == "" {
-//            let alertController = UIAlertController(title: "Oops!", message: "Please enter an email.", preferredStyle: .alert)
-//
-//            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-//            alertController.addAction(defaultAction)
-//            
-//            present(alertController, animated: true, completion: nil)
-//
-//        } else {
-//            FIRAuth.auth()?.sendPasswordReset(withEmail: self.emailTextField.text!, completion: { (error) in
-//
-//                var title = ""
-//                var message = ""
-//
-//                if error != nil {
-//                    title = "Error!"
-//                    message = (error?.localizedDescription)!
-//                } else {
-//                    title = "Success!"
-//                    message = "Password reset email sent."
-//                    self.emailTextField.text = ""
-//                }
-//
-//                let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//
-//                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-//                alertController.addAction(defaultAction)
-//
-//                self.present(alertController, animated: true, completion: nil)
-//            })
-//        }
-//    }
+     private func checkData() -> Bool {
+        let emailString : String? = self.emailTextField.text
+        let passwordString : String? = self.passwordTextField.text
+        
+        if emailString?.isEmpty == false && passwordString?.isEmpty == false {
+            return true
+        } else if emailString?.isEmpty == true {
+            NRActivityView.showBannerMessage(emailBlank, isSuccess: false)
+            return false
+        } else if passwordString?.isEmpty == true{
+            NRActivityView.showBannerMessage(passwordBlank, isSuccess: false)
+            return false
+        }
+        return false
+    }
 }
 

@@ -99,16 +99,34 @@
                                                 <state key="normal" title="Forgot Password?">
                                                     <color key="titleColor" red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="forgotPasswordAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="10D-JK-e9J"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ab8-ts-0Y5">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ab8-ts-0Y5">
                                                 <rect key="frame" x="128" y="632" width="119" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="qEg-OL-QBW"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
-                                                <state key="normal" title="New here? Sign up">
-                                                    <color key="titleColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="New here? ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <font key="NSFont" size="14" name="ChalkboardSE-Regular"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Sign up">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.99489795918367352" green="0.98979591836734693" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="14" name="ChalkboardSE-Regular"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signupAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RfR-MK-Hbc"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.019607843137254902" green="0.19607843137254902" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
@@ -162,12 +180,237 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+            <point key="canvasLocation" x="30" y="34"/>
+        </scene>
+        <!--Forgot Password View Controller-->
+        <scene sceneID="zs2-OX-Nny">
+            <objects>
+                <viewController storyboardIdentifier="ForgotPasswordViewController" id="3YK-nJ-3AU" customClass="ForgotPasswordViewController" customModule="HabbityTabbity" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RAi-Mb-6us"/>
+                        <viewControllerLayoutGuide type="bottom" id="RhI-LW-VbY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9sa-UN-aRc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGR-Cr-HhZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HabbityTabbity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pb-Hu-3Yp">
+                                        <rect key="frame" x="56" y="136" width="263.5" height="55.5"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="39"/>
+                                        <color key="textColor" red="0.96078431369999995" green="0.64705882349999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mvC-cD-d66">
+                                        <rect key="frame" x="24" y="257" width="327" height="37"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="md7-Wq-eZb"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="3YK-nJ-3AU" id="Bkr-CX-EAk"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJ5-Iw-noX">
+                                        <rect key="frame" x="24" y="314" width="327" height="37"/>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.64705882349999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                        <state key="normal" title="RESET PASSWORD">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetPasswordAction:" destination="3YK-nJ-3AU" eventType="touchUpInside" id="SGx-ZL-UWq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Q2-ub-H11">
+                                        <rect key="frame" x="113.5" y="361" width="148" height="32"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Try Again? ">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.58823999999999999" green="0.58823999999999999" blue="0.58823999999999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="14" name="ChalkboardSE-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                            <tabStops>
+                                                                <textTab alignment="left" location="28">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="56">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="84">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="112">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="140">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="168">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="196">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="224">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="252">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="280">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="308">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="336">
+                                                                    <options/>
+                                                                </textTab>
+                                                            </tabStops>
+                                                        </paragraphStyle>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="Sign in here">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.99490000000000001" green="0.98980000000000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="14" name="ChalkboardSE-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                            <tabStops>
+                                                                <textTab alignment="left" location="28">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="56">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="84">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="112">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="140">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="168">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="196">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="224">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="252">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="280">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="308">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="336">
+                                                                    <options/>
+                                                                </textTab>
+                                                            </tabStops>
+                                                        </paragraphStyle>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="signInAction:" destination="3YK-nJ-3AU" eventType="touchUpInside" id="pbH-qT-Feh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hnG-BY-MQI">
+                                        <rect key="frame" x="128" y="632" width="119" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="9to-7v-iwz"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="New here? ">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="14" name="ChalkboardSE-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="Sign up">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.99489795918367352" green="0.98979591836734693" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="14" name="ChalkboardSE-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="signUpAction:" destination="3YK-nJ-3AU" eventType="touchUpInside" id="21F-yr-enU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.019607843140000001" green="0.1960784314" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="3Pb-Hu-3Yp" firstAttribute="centerY" secondItem="LGR-Cr-HhZ" secondAttribute="centerY" constant="-170" id="3dO-jH-fby"/>
+                                    <constraint firstItem="CJ5-Iw-noX" firstAttribute="height" secondItem="mvC-cD-d66" secondAttribute="height" id="7li-Ig-3DH"/>
+                                    <constraint firstItem="CJ5-Iw-noX" firstAttribute="centerX" secondItem="LGR-Cr-HhZ" secondAttribute="centerX" id="G8p-tj-pjQ"/>
+                                    <constraint firstItem="hnG-BY-MQI" firstAttribute="centerX" secondItem="LGR-Cr-HhZ" secondAttribute="centerX" id="N7s-Dc-Ghx"/>
+                                    <constraint firstItem="CJ5-Iw-noX" firstAttribute="width" secondItem="mvC-cD-d66" secondAttribute="width" id="RzS-mB-P0b"/>
+                                    <constraint firstAttribute="bottom" secondItem="hnG-BY-MQI" secondAttribute="bottom" constant="5" id="WGf-6L-rTL"/>
+                                    <constraint firstItem="6Q2-ub-H11" firstAttribute="centerX" secondItem="LGR-Cr-HhZ" secondAttribute="centerX" id="c9D-0L-tgL"/>
+                                    <constraint firstItem="6Q2-ub-H11" firstAttribute="top" secondItem="CJ5-Iw-noX" secondAttribute="bottom" constant="10" id="hGt-4s-kBf"/>
+                                    <constraint firstItem="3Pb-Hu-3Yp" firstAttribute="centerX" secondItem="LGR-Cr-HhZ" secondAttribute="centerX" id="mR4-O6-52L"/>
+                                    <constraint firstItem="mvC-cD-d66" firstAttribute="leading" secondItem="LGR-Cr-HhZ" secondAttribute="leading" constant="24" id="orO-Fu-Ig1"/>
+                                    <constraint firstAttribute="trailing" secondItem="mvC-cD-d66" secondAttribute="trailing" constant="24" id="r5U-mb-PW6"/>
+                                    <constraint firstItem="mvC-cD-d66" firstAttribute="top" secondItem="3Pb-Hu-3Yp" secondAttribute="bottom" constant="65" id="w4d-5O-z1L"/>
+                                    <constraint firstItem="CJ5-Iw-noX" firstAttribute="top" secondItem="mvC-cD-d66" secondAttribute="bottom" constant="20" id="wa1-Ov-g1J"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LGR-Cr-HhZ" firstAttribute="top" secondItem="9sa-UN-aRc" secondAttribute="top" id="C6F-Fo-QnE"/>
+                            <constraint firstItem="LGR-Cr-HhZ" firstAttribute="leading" secondItem="9sa-UN-aRc" secondAttribute="leading" id="C8C-OP-zQo"/>
+                            <constraint firstAttribute="bottom" secondItem="LGR-Cr-HhZ" secondAttribute="bottom" id="uLF-wv-xYP"/>
+                            <constraint firstAttribute="trailing" secondItem="LGR-Cr-HhZ" secondAttribute="trailing" id="wum-Jy-KDX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="mvC-cD-d66" id="9TU-Y8-rVQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nLc-jV-TaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="741"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Xu5-Hy-BpT">
+            <objects>
+                <viewController id="6Vz-jW-FuI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Kt-UO-9X0"/>
+                        <viewControllerLayoutGuide type="bottom" id="ulj-PA-UUY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oED-wq-cv8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0s-Na-fvc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="898" y="734"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="HgU-a9-5jc">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="nhp-WW-bhm" customClass="SignUpViewController" customModule="HabbityTabbity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" automaticallyAdjustsScrollViewInsets="NO" id="nhp-WW-bhm" customClass="SignUpViewController" customModule="HabbityTabbity" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wyb-b6-Qf2"/>
                         <viewControllerLayoutGuide type="bottom" id="3cF-cy-mrt"/>
@@ -190,7 +433,10 @@
                                                 </constraints>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="email"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="nhp-WW-bhm" id="0YT-wo-otf"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sqo-8z-rgn">
                                                 <rect key="frame" x="24" y="353" width="327" height="37"/>
@@ -200,7 +446,10 @@
                                                 </constraints>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="password"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="nhp-WW-bhm" id="Avg-Ck-Osu"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d3f-U9-1fe">
                                                 <rect key="frame" x="24" y="403" width="327" height="37"/>
@@ -210,7 +459,10 @@
                                                 </constraints>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="password"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="nhp-WW-bhm" id="T16-FZ-Ke8"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFf-yM-3th">
                                                 <rect key="frame" x="24" y="468" width="327" height="37"/>
@@ -257,6 +509,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signInAction:" destination="nhp-WW-bhm" eventType="touchUpInside" id="MKG-A5-1aQ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.019607843140000001" green="0.1960784314" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
@@ -307,6 +562,7 @@
                         <outlet property="confirmPasswordTextField" destination="d3f-U9-1fe" id="gMx-WU-lSJ"/>
                         <outlet property="emailAddressTextfield" destination="dG1-jx-Uiu" id="8jL-ZT-8vP"/>
                         <outlet property="passwordTextField" destination="Sqo-8z-rgn" id="Mio-3R-VAS"/>
+                        <outlet property="scrollView" destination="Uwe-sc-khF" id="X9d-ug-rGO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tbv-JF-Osr" userLabel="First Responder" sceneMemberID="firstResponder"/>
