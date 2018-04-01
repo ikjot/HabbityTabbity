@@ -66,6 +66,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             Auth.auth().signIn(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (user, error) in
                 if error == nil {
                     print("You have successfully logged in")
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let signupController = storyboard.instantiateViewController(withIdentifier: "DashboardViewController")
+                    self.navigationController?.pushViewController(signupController, animated: true)
                 } else {
                     NRActivityView.showBannerMessage(someErrorOccuredString, isSuccess: false)
                 }

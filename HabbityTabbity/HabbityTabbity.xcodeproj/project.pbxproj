@@ -24,6 +24,8 @@
 		8458AA7B206F5DED00D5D1E5 /* UIColor+MoreColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458AA7A206F5DED00D5D1E5 /* UIColor+MoreColors.swift */; };
 		8458AA7D206F62DD00D5D1E5 /* HTHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458AA7C206F62DD00D5D1E5 /* HTHelper.swift */; };
 		8458AA7F206F6ACF00D5D1E5 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458AA7E206F6ACF00D5D1E5 /* ForgotPasswordViewController.swift */; };
+		8458AA812070089800D5D1E5 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458AA802070089800D5D1E5 /* DashboardViewController.swift */; };
+		8458AA8320707EF300D5D1E5 /* AddNewHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458AA8220707EF300D5D1E5 /* AddNewHabitViewController.swift */; };
 		C0BC7274EBBAD9210F9C5ACE /* Pods_HabbityTabbityUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8032115CB6266C4B81C46136 /* Pods_HabbityTabbityUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		8458AA7A206F5DED00D5D1E5 /* UIColor+MoreColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+MoreColors.swift"; sourceTree = "<group>"; };
 		8458AA7C206F62DD00D5D1E5 /* HTHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTHelper.swift; sourceTree = "<group>"; };
 		8458AA7E206F6ACF00D5D1E5 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		8458AA802070089800D5D1E5 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		8458AA8220707EF300D5D1E5 /* AddNewHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewHabitViewController.swift; sourceTree = "<group>"; };
 		8954E9E4F3C281E91C2408F0 /* Pods-HabbityTabbityUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabbityTabbityUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HabbityTabbityUITests/Pods-HabbityTabbityUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9EA96F33F570230C73EAFFA2 /* Pods-HabbityTabbityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabbityTabbityTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HabbityTabbityTests/Pods-HabbityTabbityTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1DDB2CF8B28419938CAA815 /* Pods_HabbityTabbity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HabbityTabbity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,8 +185,10 @@
 			isa = PBXGroup;
 			children = (
 				842FEE28205B69A500933210 /* LoginViewController.swift */,
+				8458AA8220707EF300D5D1E5 /* AddNewHabitViewController.swift */,
 				842FEE5D205F308300933210 /* SignUpViewController.swift */,
 				8458AA7E206F6ACF00D5D1E5 /* ForgotPasswordViewController.swift */,
+				8458AA802070089800D5D1E5 /* DashboardViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -539,11 +545,13 @@
 			files = (
 				8458AA75206F5CC300D5D1E5 /* NRActivityView.swift in Sources */,
 				842FEE29205B69A500933210 /* LoginViewController.swift in Sources */,
+				8458AA8320707EF300D5D1E5 /* AddNewHabitViewController.swift in Sources */,
 				8458AA7B206F5DED00D5D1E5 /* UIColor+MoreColors.swift in Sources */,
 				842FEE58205BA1F200933210 /* UIViewController+Customization.swift in Sources */,
 				842FEE5E205F308300933210 /* SignUpViewController.swift in Sources */,
 				8458AA7F206F6ACF00D5D1E5 /* ForgotPasswordViewController.swift in Sources */,
 				8458AA7D206F62DD00D5D1E5 /* HTHelper.swift in Sources */,
+				8458AA812070089800D5D1E5 /* DashboardViewController.swift in Sources */,
 				842FEE27205B69A500933210 /* AppDelegate.swift in Sources */,
 				8458AA78206F5D2B00D5D1E5 /* Constants.swift in Sources */,
 			);

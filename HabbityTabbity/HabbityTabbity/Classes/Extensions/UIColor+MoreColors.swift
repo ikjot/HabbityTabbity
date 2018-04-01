@@ -17,4 +17,8 @@ extension UIColor {
     class func ht_bannerErrorBackgroundColor() -> UIColor! {
         return UIColor.red
     }
+    
+    class func ht_app_blue_color() -> UIColor! {
+        return UIColor(red:5.00/255.0, green:50.0/255.0, blue:103.5/255.0, alpha:1.000)
+    }
 }
